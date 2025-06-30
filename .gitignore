@@ -1,0 +1,19 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Django files
+*.sqlite3
+staticfiles/
+media/
+
+# IDE / Editor
+.idea/
+*.suo
+*.swp
