@@ -4,4 +4,5 @@ from django.shortcuts import render, redirect
 
 def subjects_view(request):
     
+
     return render(request, 'subjects.html')
