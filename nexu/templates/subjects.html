@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nexu | Subjects</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-top-menu">
+                <a class="nav-logo" href="/">
+                    <img src="" alt="Logo" width="100">
+                </a>
+                <a class="nav-link" href="/">home</a>
+                <a class="nav-link" href="/subjects">subjects</a>
+                <a class="nav-link" href="/planner">planner</a> 
+            </div>
+            <div class="sidebar-bottom-menu">
+                <a class="nav-link" href="">settings</a>
+                <div class="user-profile">
+                    <a class="profile-photo" href="/account">
+                        <img src="" alt="Logo" width="100">
+                    </a>
+                    <a class="nav-link-account" href="/account">account</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="nav-buttons">
+                
+            </div>
+        </div>
+
+        <section>
+            <!--welcome logic-->
+
+            {% if user.is_authenticated %}
+                <h1>Manage your subjects, {{ user }}</h1>
+            {% else %}
+                <h1>Sign in to create subjects</h1>
+            {% endif %}
+        </section>
+
+        <section>
+            <div>
+
+            </div>
+                <div class="subject-action-bar">
+                    <a>
+                        <button>Create subject</button>
+                    </a>
+                    <a>
+                        <button>...</button>
+                    </a>
+                </div>
+                <div clcass="subject-action-bar-devider">
+                    <hr>
+                </div>
+                <div class="subject-container">
+                    <div class="subject-div">
+                        <a>
+                            subject 1
+                        </a>
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>
