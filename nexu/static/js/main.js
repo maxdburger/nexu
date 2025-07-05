@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if (!openButton || !closeButton || !modal) return;
 
     openButton.addEventListener('click', function(){
-        modal.style.display = 'block';
+        modal.style.display = 'flex';
     })
 
     closeButton.addEventListener('click', function(){
