@@ -55,12 +55,15 @@
                 <div class="subject-action-bar-devider">
                     <hr>
                 </div>
+                
                 <div class="subject-container">
-                    <div class="subject-div">
-                        <a>
-                            subject 1
-                        </a>
-                    </div>
+                    {% for s in subjects %}
+                        <div class="subject-div">
+                            <a href="{% url 'subject-overview' s.slug %}">{{ s.name }}</a>
+                        </div>
+                    {% empty %}
+                        <h4>No subjects yet.</h2>
+                    {% endfor %} 
                 </div>
 
                 <div id="create-subject-modal" class="modal">
